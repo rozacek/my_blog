@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from my_blog import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', 'helloapp.views.home_view'),
+    url(r'^', views.home_view),
 ]

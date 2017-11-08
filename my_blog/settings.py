@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+from my_blog import settings_private
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +27,11 @@ SECRET_KEY = '6c3#qh2o(ftke-&ch*)u0&6d7j_(n0i80x9f&sq$@$$c4vda5e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'rozacek.ayz.pl:8888',
+    'rozacek.ayz.pl',
+    'ayz.pl',
+]
 
 
 # Application definition
@@ -75,9 +81,11 @@ WSGI_APPLICATION = 'my_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/home/rozacek/apps/conf/mysql.cnf',
-        },
+        'NAME': settings_private.name,
+        'USER': settings_private.user,
+        'PASSWORD': settings_private.password,
+        'HOST': settings_private.host,
+        'PORT': '',
     }
 }
 

@@ -1,4 +1,4 @@
-# /home/rozacek/apps/mblog/.venv/bin/python
+#!/home/rozacek/apps/my_blog/.venv/bin/python
 
 import os
 import sys

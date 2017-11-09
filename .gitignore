@@ -1,0 +1,7 @@
+#Skip folders
+/my_blog/__pycache__/
+.venv
+
+
+#Skip files
+/my_blog/settings_private.py

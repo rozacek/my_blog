@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+# /home/rozacek/apps/mblog/.venv/bin/python
+
 import os
 import sys
 

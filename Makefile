@@ -26,4 +26,4 @@ start_uwsgi:
 
 kill_uwsgi:
 	@echo "Killing all uwsgi processes"
-	-kill_uwsgi.sh
+	./kill_uwsgi.sh

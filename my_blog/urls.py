@@ -43,5 +43,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', views.home_view),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'snippets/^', include('snippets.urls')),
+    url(r'^snippets/', include('snippets.urls')),
 ]

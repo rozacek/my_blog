@@ -27,3 +27,8 @@ start_uwsgi:
 kill_uwsgi:
 	@echo "Killing all uwsgi processes"
 	./kill_uwsgi.sh
+
+restart_uwsgi:
+	$(call cyanecho, "Restarting the uwsgi server on rozacek.ayz.pl:$(PORT)")
+	./kill_uwsgi.sh
+	uwsgi --plugin http,python --http rozacek.ayz.pl:$(PORT) --chdir /home/rozacek/apps/my_blog/ --module my_blog.wsgi --master --processes 1 --workers 1 --threa$

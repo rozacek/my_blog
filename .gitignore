@@ -9,3 +9,4 @@
 #Skip files
 /my_blog/settings_private.py
 *.pyc
+my_blog/__pycache__/settings.cpython-34.pyc

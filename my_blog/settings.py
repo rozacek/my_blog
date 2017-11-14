@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-import os
-
 from my_blog import settings_private
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -75,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_blog.wsgi.application'
 
-
 # Database
 DATABASES = {
     'default': {
@@ -87,7 +84,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -107,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -121,9 +116,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/rozacek/domains/rozacek.ayz.pl/public_html/static/'
@@ -133,9 +126,7 @@ STATIC_ROOT = '/home/rozacek/domains/rozacek.ayz.pl/public_html/static/'
 #                     '/home/rozacek/domains/rozacek.ayz.pl/public_html/static/']
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ]
 }

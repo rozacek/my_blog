@@ -2,6 +2,10 @@
 /my_blog/__pycache__/
 .venv
 /static
+/snippets/__pycache__/
+/snippets/migrations/__pycache__/
+
 
 #Skip files
 /my_blog/settings_private.py
+*.pyc

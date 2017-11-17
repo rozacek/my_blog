@@ -1,4 +1,4 @@
-PORT=8080
+PORT=8889
 PACKAGES=my_blog
 
 define cyanecho
@@ -22,7 +22,7 @@ endef
 
 start_uwsgi:
 	$(call cyanecho, "Running the uwsgi server on rozacek.ayz.pl:$(PORT)")
-	uwsgi --plugin http,python --http rozacek.ayz.pl:$(PORT) --chdir /home/rozacek/apps/my_blog/ --module my_blog.wsgi --master --processes 1 --workers 1 --threads 1 --static-map /static=/home/rozacek/domains/rozacek.ayz.pl/public_html/static --static-expires-type /*=7776000 --offload-threads %k --check-static /home/rozacek/domains/rozacek.ayz.pl/public_html/static --daemonize=/home/rozacek/domains/rozacek.ayz.pl/logs/log_my_blog_uwsgi.txt
+	uwsgi --plugin http,python --http 127.0.0.1:$(PORT) --chdir /home/rozacek/apps/my_blog/ --module my_blog.wsgi --master --processes 1 --workers 1 --threads 1 --static-map /static=/home/rozacek/domains/rozacek.ayz.pl/public_html/static --static-expires-type /*=7776000 --offload-threads %k --check-static /home/rozacek/domains/rozacek.ayz.pl/public_html/static --daemonize=/home/rozacek/domains/rozacek.ayz.pl/logs/log_my_blog_uwsgi.txt
 
 kill_uwsgi:
 	@echo "Killing all uwsgi processes"
@@ -30,4 +30,4 @@ kill_uwsgi:
 
 nd_start_uwsgi:
 	$(call cyanecho, "Running the uwsgi server on rozacek.ayz.pl:$(PORT)")
-	uwsgi --plugin http,python --http rozacek.ayz.pl:$(PORT) --chdir /home/rozacek/apps/my_blog/ --module my_blog.wsgi --master --processes 1 --workers 1 --threads 1 --static-map /static=/home/rozacek/domains/rozacek.ayz.pl/public_html/static --static-expires-type /*=7776000 --offload-threads %k --check-static /home/rozacek/domains/rozacek.ayz.pl/public_html/static
+	uwsgi --plugin http,python --http 127.0.0.1:$(PORT) --chdir /home/rozacek/apps/my_blog/ --module my_blog.wsgi --master --processes 1 --workers 1 --threads 1 --static-map /static=/home/rozacek/domains/rozacek.ayz.pl/public_html/static --static-expires-type /*=7776000 --offload-threads %k --check-static /home/rozacek/domains/rozacek.ayz.pl/public_html/static

@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'rozacek.ayz.pl:8888',
     'rozacek.ayz.pl',
     'ayz.pl',
+    '127.0.0.1',
 ]
 
 # Application definition
